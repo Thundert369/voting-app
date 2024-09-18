@@ -14,6 +14,11 @@ app.use(express.json());  // To parse JSON request bodies
 app.use('/api/auth', authRoutes);
 app.use('/api/vote', voteRoutes);
 
+// Define a route to handle GET requests to the root ('/')
+app.get('/', (req, res) => {
+  res.send('Hello, this is your voting app backend!');
+});
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
