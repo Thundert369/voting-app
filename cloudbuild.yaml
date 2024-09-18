@@ -5,3 +5,5 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/voting-app-backend']
 images:
 - 'gcr.io/$PROJECT_ID/voting-app-backend'
+options:
+  logging: CLOUD_LOGGING_ONLY
